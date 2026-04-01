@@ -1,0 +1,45 @@
+---
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<section id="three-canvas">
+
+		</section>
+	</body>
+</html>
+
+<style>
+	#three-canvas {
+		width: 100%;
+		height: 100svh;
+		background-color: skyblue;
+	}
+	body {
+		margin: 0;
+		background-color: black;
+	}
+</style>
+
+<script>
+	import { ThreeJS } from '../threeJS/ThreeJS.js'
+
+function runThreeJS() {
+    const container = document.getElementById('three-canvas');
+    // 1. Create an instance of the ThreeJS app
+    const threeJS = new ThreeJS(container)
+    
+    // 2. Render the scene
+    threeJS.render()
+}
+
+runThreeJS()
+</script>
